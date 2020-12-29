@@ -21,7 +21,6 @@ public class MySinglyLinkedList {
             System.out.print(curNode.getValue() + "->");
             curNode = curNode.getNext();
         }
-
     }
 
     public void prepend(int value){
@@ -52,7 +51,7 @@ public class MySinglyLinkedList {
     public void insert(int value, int pos){
         pos = wrapIndex(pos);
         
-        if (pos == 1){
+        if (pos == 0){
             this.prepend(value);
         }
         if (pos == length){
@@ -99,6 +98,7 @@ public class MySinglyLinkedList {
         list.append(6);
         list.insert(5, 4);
         list.remove(1);
+        list.insert(7,2);
         list.printList();
         list.reverse();
         System.out.println();
